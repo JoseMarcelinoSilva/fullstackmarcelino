@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>04_Git_GitHub</title>
+        <link rel="stylesheet" href="assets/aula8_git_help_style.css">
+        <link rel="shortcut icon" href="./assets/image/git_icon.png"
+            type="image/x-icon">
+    </head>
+    <body>
+
+        <h1>aula8 - Pedindo ajuda ao git</h1>
+
+        <h2>git commit -help</h2>
+
+        <p>
+            O comando git commit -help (na verdade, o correto é git commit <br>
+            --help ou git help commit) é usado para exibir o manual de ajuda do
+            <br>
+            comando git commit diretamente no terminal. <br> <br>
+
+            Aqui está como ele funciona e o que acontece: <br>
+        </p>
+
+        <h3>1. A diferença entre -h e --help</h3>
+
+        <ul>
+            <li>git commit -h → Exibe um resumo curto e rápido com as opções
+                mais comuns (uso geral).</li>
+            <li>git commit --help → Abre o manual completo (geralmente no
+                navegador ou no programa less), com explicações detalhadas,
+                exemplos e todas as opções disponíveis.</li>
+        </ul>
+
+        <p>
+            OBS: -help (com um hífen só) não funciona. O correto é --help (dois
+            hífens) ou -h.
+        </p>
+
+        <h3>2. O que é exibido</h3>
+
+        <p>
+            Quando você usa git commit --help, o Git:
+        </p>
+
+        <ol>
+            <li>Localiza o arquivo de ajuda interno.</li>
+            <li>Exibe no terminal (usando o paginador less por padrão) ou abre
+                no navegador (dependendo da configuração).</li>
+            <li>
+                Mostra:
+                <ul>
+                    <li>Nome do comando</li>
+                    <li>Sinopse (como usar)</li>
+                    <li>Descrição detalhada</li>
+                    <li>Lista completa de opções (flags)</li>
+                    <li>Exemplos práticos</li>
+                    <li>Arquivos relacionados (como .gitignore)</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h3>3. Exemplo prático</h3>
+
+        <p>
+            # Ajuda resumida (recomendado para consultas rápidas)
+            git commit -h <br>
+
+            # Ajuda completa (manual extenso)
+            git commit --help
+        </p>
+
+        <h3>4. Navegando no manual</h3>
+
+        <p>
+            Se o manual abrir no less (terminal), você pode:
+        </p>
+
+        <ul>
+            <li>Setas ou Page Up/Down para rolar</li>
+            <li>/ para buscar uma palavra</li>
+            <li>q para sair</li>
+        </ul>
+
+        <h3>5. Alternativas</h3>
+
+        <p>
+            # Outra forma de ver a ajuda
+            git help commit
+        </p>
+
+        <p>
+            <strong>Dica:</strong> Sempre que tiver dúvida sobre um comando Git,
+            use --help ou -h <br>
+            — é a documentação oficial e confiável!
+        </p>
+
+        <p>
+            <strong>Obs:</strong> para saber todos os comando que tem no git,
+            use o comando <strong>git help --all</strong>
+        </p>
+
+    </body>
+</html>

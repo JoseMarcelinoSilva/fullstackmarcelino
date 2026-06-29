@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>04_Git_GitHub</title>
+        <link rel="stylesheet" href="assets/aula9_branchs_style.css">
+        <link rel="shortcut icon" href="./assets/image/git_icon.png"
+            type="image/x-icon">
+    </head>
+    <body>
+
+        <h1>aula9 - Entendendo branchs</h1>
+
+        <p>
+            Entender branches (ramificações) é o passo mais importante para <br>
+            dominar o Git. Elas são o coração do fluxo de trabalho em equipe e
+            <br>
+            da organização do código. <br> <br>
+            Vamos dividir isso em 3 níveis: <strong>Conceito, Comandos Práticos
+                e Fluxo <br>
+                de Trabalho.</strong>
+        </p>
+
+        <h3>1. O Conceito (A "Linha do Tempo" Paralela)</h3>
+
+        <p>
+            Imagine que seu código é um livro de história.
+        </p>
+
+        <ul>
+            <li>A main (ou master) é a versão oficial, a história principal que
+                está publicada.</li>
+            <li>Uma branch é como criar um rascunho alternativo. Você pega o
+                livro no capítulo 10 e decide escrever um final alternativo sem
+                rasurar o livro original.</li>
+        </ul>
+
+        <h3>Por que usar?</h3>
+
+        <ul>
+            <li><strong>Isolamento:</strong> Você pode testar ideias loucas sem
+                quebrar o sistema em produção.</li>
+            <li><strong>Paralelismo:</strong> Enquanto você faz a tela de login,
+                seu colega faz a tela de cadastro na branch dele.</li>
+            <li><strong>Segurança:</strong> O código só vai para a main depois
+                que for revisado e testado.</li>
+        </ul>
+
+        <h3>2. A Mecânica (Como o Git funciona por baixo)</h3>
+
+        <ul>
+            <li><strong>Ponteiro:</strong> Uma branch é apenas um ponteiro móvel
+                (um adesivo) que aponta para um commit específico.</li>
+            <li><strong>HEAD:</strong> O HEAD é um ponteiro especial que diz:
+                "Em qual branch eu estou agora?".</li>
+            <li><strong>Criação:</strong> Quando você cria uma branch, você está
+                criando uma cópia do estado atual do código naquele exato
+                momento.</li>
+        </ul>
+
+    </body>
+</html>
