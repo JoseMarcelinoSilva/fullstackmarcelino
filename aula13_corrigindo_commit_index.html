@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>04_Git_GitHub</title>
+        <link rel="stylesheet" href="assets/aula9_branchs_style.css">
+        <link rel="shortcut icon" href="./assets/image/git_icon.png"
+            type="image/x-icon">
+    </head>
+    <body>
+
+        <h1>aula13 - Corrigindo mensagem de commit</h1>
+
+        <p>
+            Para corrigir a <strong>última mensagem de commit</strong> no Git,
+            você pode usar o comando: <br> <br>
+
+            bash <br> <br>
+            git commit --amend -m "Nova mensagem corrigida" <br> <br>
+            Isso substitui a mensagem do commit mais recente.
+        </p> <br> <br>
+
+        <h3>Se o commit já foi enviado ao repositório remoto (push)</h3> <br>
+        <br>
+
+        <p>
+            Se você já fez push, será necessário forçar o envio:
+            <br> <br>
+
+            bash <br> <br>
+
+            git push --force-with-lease <br> <br>
+            ⚠️ <strong>Cuidado:</strong> só faça isso se ninguém mais tiver
+            puxado (pull) esse
+            <br>
+            commit. Se outras pessoas já baixaram, isso pode causar conflitos.
+        </p> <br> <br>
+
+        <h3>Se você quer corrigir mensagens de commits mais antigos</h3> <br>
+        <br>
+
+        <p>
+            Use <strong>rebase interativo:</strong>
+            <br> <br>
+
+            bash <br> <br>
+            git rebase -i HEAD~3 # para os últimos 3 commits <br> <br>
+
+            No editor, troque pick por reword no commit que deseja corrigir,
+            salve e edite a mensagem.
+        </p> <br> <br>
+
+        <h3>Se a mensagem tem erro de digitação e você quer algo mais
+            rápido</h3> <br> <br>
+
+        <p>
+            bash <br> <br>
+
+            git commit --amend -c HEAD <br> <br>
+            Isso abre o editor para você alterar a mensagem.
+        </p> <br> <br>
+
+        <h3>ESSA É UMA MENSAGEM JÁ COMMITADA E QUEREMOS CORRIGIR</h3>
+
+    </body>
+</html>
