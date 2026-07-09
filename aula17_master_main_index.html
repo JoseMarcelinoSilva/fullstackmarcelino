@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>aula16_GitHub</title>
+        <link rel="stylesheet" href="assets/aula9_branchs_style.css">
+        <link rel="shortcut icon" href="./assets/image/git_icon.png"
+            type="image/x-icon">
+    </head>
+    <body>
+
+        <h1>aula17 - Jogando nova funcionalidade no master/main</h1>
+
+        <p>
+            Para saber a diferença entre commits no Git, você tem várias opções,
+            <br>
+            dependendo do que exatamente quer comparar:
+        </p> <br> <br>
+
+        <h3>1. Comparar dois commits específicos (pelo hash)</h3> <br>
+
+        <p>
+            git diff &lt;hash-commit-A> &lt;hash-commit-B>
+        </p> <br> <br>
+
+        <h3>2. Desfazer commits mantendo as alterações (soft reset)</h3>
+        <br>
+        <br>
+
+        <p>
+            bash <br> <br>
+            git reset --soft &lt;hash-do-commit&gt; <br> <br>
+
+            Exemplo: <br> <br>
+
+            git git diff abc123 def456
+        </p> <br> <br>
+
+        <h3>2. Comparar um commit com o estado atual (working directory)</h3>
+        <br> <br>
+
+        <p>
+            git diff &lt;hash-commit>
+        </p> <br> <br>
+
+        <h3>3. Comparar um commit com o commit pai (o que mudou naquele
+            commit)</h3>
+        <br>
+        <br>
+
+        <p>
+            git show &lt;hash-commit> ^<br> <br>
+
+            ou
+
+            git diff &lt;hash-commit>^ &lt;hash-commit>
+        </p> <br> <br>
+
+        <h3>4. Ver a diferença entre dois commits de forma resumida (apenas
+            nomes de arquivos)</h3> <br> <br>
+
+        <p>
+            git diff --name-only &lt;hash-A> &hash-B>
+        </p> <br> <br>
+
+        <h3>5. Comparar o último commit com o anterior</h3> <br> <br>
+
+        <p>
+            git diff HEAD~1 HEAD
+        </p>
+        <br> <br>
+
+        <h3>6. Ver a diferença entre dois branches (últimos commits de
+            cada)</h3>
+
+        <p>
+            git diff &lt;branch-A> &lt;branch-B>
+        </p> <br>
+
+        <h3>7. Ver o que mudou em um commit específico (mais detalhado que o
+            show)</h3>
+
+        <p>git log -p -1 &lt;hash-commit></p> <br> <br>
+
+        <h3>8. Comparar dois commits ignorando espaços em branco</h3>
+
+        <p>
+            git diff -w &lt;hash-A> &lt;hash-B>
+        </p> <br> <br>
+
+        <h3>9. Para ver a diferença entre commits de forma visual (gráfica)</h3>
+
+        <p>
+            git difftool &lt;hash-A> &lt;hash-B> <br> <br>
+
+            (Isso abrirá uma ferramenta como Meld, Beyond Compare, etc., se
+            configurada)
+        </p> <br> <br>
+
+        <h3>10. Ver a diferença entre o último commit e o commit de dois passos
+            atrás</h3> <br> <br>
+
+        <p>
+            git diff HEAD~2 HEAD
+        </p> <br> <br>
+
+        <h3>Dica extra: facilitar a navegação</h3> <br> <br>
+
+        <p>
+            Use git log --oneline para ver os hashes de forma resumida e
+            escolher quais commits comparar. <br> <br>
+
+            git log --oneline <br> <br>
+
+            Exemplo de saída: <br> <br>
+
+            text <br> <br>
+            abc1234 (HEAD -> main) Corrige bug no login <br>
+            def5678 Adiciona nova funcionalidade de login <br>
+            ghi9012 Atualiza documentação para o v1.0 <br> <br>
+
+            Depois: <br> <br>
+
+            git diff abc1234 def5678
+        </p>
+
+    </body>
+</html>
