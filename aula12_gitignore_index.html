@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>04_Git_GitHub</title>
+        <link rel="stylesheet" href="assets/aula9_branchs_style.css">
+        <link rel="shortcut icon" href="./assets/image/git_icon.png"
+            type="image/x-icon">
+    </head>
+    <body>
+
+        <h1>aula12 - Gitignore</h1>
+
+        <p>
+            Imagine que o <strong>Git</strong> é como um fotógrafo que tira uma
+            foto do seu <br>
+            projeto sempre que você faz uma alteração importante (um commit).
+            <br>
+            Porém, nem tudo precisa aparecer nessas fotos. É exatamente para
+            <br>
+            isso que serve o .gitignore.
+        </p> <br> <br>
+
+        <h3>O que é o .gitignore?</h3> <br> <br>
+
+        <p>
+            O .gitignore é um arquivo que diz ao Git: <br>
+            <strong>"Esses arquivos e pastas não precisam ser monitorados nem enviados para o repositório."</strong>
+            <br> <br>
+
+            Ou seja, tudo o que estiver listado nele será ignorado pelo Git.
+        </p> <br> <br>
+
+        <h3>Por que ele é importante?</h3> <br> <br>
+
+        <p>
+            Alguns arquivos não devem ser compartilhados porque:
+        </p> <br> <br>
+
+        <ul>
+            <li>São criados automaticamente pelo computador.</li>
+            <li>Podem conter informações pessoais ou senhas.</li>
+            <li>Podem ser muito grandes.</li>
+            <li>Podem conter arquivos de configuração.</li>
+            <li>Podem ser recriados a qualquer momento.</li>
+        </ul>
+
+        <h3>Exemplo prático</h3> <br> <br>
+
+        <p>
+            Imagine que você está desenvolvendo um projeto em React.
+            <br> <br>
+
+            Sua pasta pode ficar assim:
+            <br> <br>
+
+            meu-projeto/ <br>
+            │ <br>
+            ├── src/ <br>
+            ├── public/ <br>
+            ├── node_modules/ <br>
+            ├── package.json <br>
+            ├── package-lock.json <br>
+            ├── .env <br>
+            ├── .gitignore <br> <br>
+
+            Você não precisa enviar:
+
+            <ul>
+                <li>node_modules/ → pode ser recriada com npm install.</li>
+                <li>.env → normalmente contém senhas e chaves da API.</li>
+            </ul> <br> <br>
+
+            Então seu .gitignore ficaria assim:
+            <br> <br>
+
+            &lt;/&gt;gitignore <br> <br>
+            node_modules/ <br>
+            .env <br> <br>
+
+            Assim, o Git ignora essas pastas e arquivos.
+        </p> <br> <br>
+
+    </body>
+</html>

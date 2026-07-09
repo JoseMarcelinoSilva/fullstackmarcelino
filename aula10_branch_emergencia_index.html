@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>04_Git_GitHub</title>
+        <link rel="stylesheet" href="assets/aula9_branchs_style.css">
+        <link rel="shortcut icon" href="./assets/image/git_icon.png"
+            type="image/x-icon">
+    </head>
+    <body>
+
+        <h1>aula10 - Criando branch de emergência</h1>
+
+        <p>
+            Para criar uma <strong>branch de emergência</strong> no Git, você
+            pode seguir os <br>
+            passos abaixo. O termo "emergência" geralmente indica que você <br>
+            precisa interromper o que está fazendo para corrigir um bug crítico
+            <br>
+            em produção.
+        </p> <br> <br>
+
+        <h3>1. Certifique-se de estar na branch correta (geralmente main ou
+            master)</h3> <br> <br>
+
+        <p>
+            Antes de criar a branch, atualize sua branch principal para ter <br>
+            certeza de que está partindo da versão mais recente: <br> <br>
+
+            bash <br> <br>
+            git checkout main <br>
+            git pull origin main
+        </p> <br> <br>
+
+        <h3>2. Crie a branch de emergência</h3> <br> <br>
+
+        <p>
+            Use um nome descritivo, como hotfix/titulo-do-bug ou
+            emergency/correcao-critica: <br> <br>
+
+            bash <br> <br>
+
+            git checkout -b hotfix/titulo-do-bug <br> <br>
+
+            Ou, se preferir criar sem já mudar para ela: <br> <br>
+
+            bash <br> <br>
+
+            git branch hotfix/correcao-login <br>
+            git checkout hotfix/correcao-login
+        </p> <br> <br>
+
+        <h3>3. Faça as alterações necessárias</h3> <br> <br>
+
+        <p>
+            Corrija o bug, adicione os arquivos modificados e faça o commit:
+            <br> <br>
+
+            bash <br> <br>
+
+            git add . <br>
+            git commit -m "hotfix: corrige bug crítico no login"
+        </p> <br> <br>
+
+        <h3>4. Envie a branch para o repositório remoto (opcional, mas
+            recomendado)</h3> <br> <br>
+
+        <p>
+            Se desejar, envie a branch para o repositório remoto:
+            <br> <br>
+
+            bash <br> <br>
+
+            git push origin hotfix/correcao-login
+
+        </p> <br> <br>
+
+        <h3>5. Depois de testar, faça o merge</h3> <br> <br>
+
+        <p>
+            Quando a correção estiver pronta, volte para a branch principal e
+            faça o merge:
+            <br> <br>
+
+            bash <br> <br>
+
+            git checkout main <br>
+            git merge hotfix/correcao-login <br>
+            git push origin main
+        </p> <br> <br>
+
+        <h3>6. (Opcional) Delete a branch de emergência</h3> <br> <br>
+
+        <p>
+            Apague a branch de emergência:
+            <br> <br>
+
+            bash <br> <br>
+
+            git branch -D hotfix/correcao-login <br>
+            git push origin --delete hotfix/correcao-login
+        </p>
+
+    </body>
+</html>
