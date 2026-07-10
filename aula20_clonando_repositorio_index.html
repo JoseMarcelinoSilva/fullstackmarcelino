@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>aula16_GitHub</title>
+        <link rel="stylesheet" href="assets/aula18_conflito_merge_style.css">
+        <link rel="shortcut icon" href="./assets/image/git_icon.png"
+            type="image/x-icon">
+    </head>
+    <body>
+
+        <h1>aula20 - Clonando um repositório</h1>
+
+        <h3>O que é um conflito de merge?</h3> <br>
+
+        <p>
+            Um conflito acontece quando duas branches alteraram as mesmas linhas
+            <br>
+            do mesmo arquivo de formas diferentes. O Git não sabe qual versão
+            <br>
+            manter e pede sua ajuda.
+        </p> <br> <br>
+
+        <h3>Como o Git te avisa sobre um conflito</h3>
+        <br>
+
+        <p>
+            $ git merge feature/nova-funcionalidade <br>
+            Auto-merging arquivo.js <br>
+            CONFLICT (content): Merge conflict in arquivo.js <br>
+            Automatic merge failed; fix conflicts and then commit the result.
+        </p> <br> <br>
+
+        <h3>Identificando arquivos em conflito</h3>
+        <br>
+
+        <p>
+            Ver quais arquivos estão com conflito no merge: <br>
+            git status <br> <br>
+
+            # Saída típica: <br>
+            # both modified: arquivo.js <br>
+            # both modified: style.css
+        </p> <br> <br>
+
+        <h3>Estrutura de um arquivo em conflito</h3>
+        <br>
+
+        <p>
+            O Git insere marcadores no arquivo: <br>
+            function calcularPreco(produto) { <br>
+            <<<<<<< HEAD <br>
+            // Código da branch MAIN <br>
+            return produto.preco * 1.10; <br>
+            ======= <br>
+            // Código da branch FEATURE <br>
+            return produto.preco * 1.15; <br>
+            >>>>>>> feature/nova-funcionalidade <br>
+            } <br>
+        </p> <br> <br>
+
+        <h3>O que cada parte significa:</h3>
+
+        <ul>
+            <li><<<<<<< HEAD — começo do que está na branch atual
+                (main/master)</li>
+            <li>======= — separador entre as duas versões</li>
+            <li>>>>>>>> feature/nova-funcionalidade — fim do que está na outra
+                branch</li>
+        </ul>
+    </body>
+</html>
