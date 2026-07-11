@@ -1,4 +1,4 @@
 # fullstackmarcelino
 Fullstack AI - Marcelino
 
-texto alterado no repositório local
+texto alterado novamente no repositório remoto (github)
